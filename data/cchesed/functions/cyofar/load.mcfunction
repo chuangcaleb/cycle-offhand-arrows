@@ -1,3 +1,6 @@
 # ----------------------------------- Load ----------------------------------- #
 
-tag @a remove cc.ac.standby
+# Add scoreboards
+scoreboard objectives add cc.ca.current dummy
+
+# Reset tags
