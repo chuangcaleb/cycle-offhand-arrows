@@ -44,11 +44,11 @@ for count in range(0, inv_limit):
     # Case: not arrow
     not_list = [
         f"say not {count}",
-        "scoreboard players add @s cc.ca.current 1" if not_limit else "scoreboard players set @s cc.ca.current 0",  # Increment pointer
+        "scoreboard players add @s cc.ca.pointer 1" if not_limit else "scoreboard players set @s cc.ca.pointer 0",  # Increment pointer
         # If looped back, then just switch back
-        # "execute if score @s cc.ca.initial = @s cc.ca.current run say switch",
-        "execute if score @s cc.ca.initial = @s cc.ca.current run item replace entity @s weapon.offhand from entity @e[tag=cc.ca.temp_item,limit=1] weapon",
-        f"execute unless score @s cc.ca.initial = @s cc.ca.current run function cchesed:cyofar/check_slot/{next_i}"
+        # "execute if score @s cc.ca.initial = @s cc.ca.pointer run say switch",
+        "execute if score @s cc.ca.initial = @s cc.ca.pointer run item replace entity @s weapon.offhand from entity @e[tag=cc.ca.temp_item,limit=1] weapon",
+        f"execute unless score @s cc.ca.initial = @s cc.ca.pointer run function cchesed:cyofar/check_slot/{next_i}"
     ]
     with open(base_path + "not_slot/" + str(count) + ".mcfunction", 'w') as file:
         file.writelines(list_to_str(not_list))
@@ -56,7 +56,7 @@ for count in range(0, inv_limit):
     # Case: yes arrow
     yes_list = [
         f"say yes {count}",
-        "scoreboard players add @s cc.ca.current 1" if not_limit else "scoreboard players set @s cc.ca.current 0",  # Increment pointer
+        "scoreboard players add @s cc.ca.pointer 1" if not_limit else "scoreboard players set @s cc.ca.pointer 0",  # Increment pointer
         f"item replace entity @s weapon.offhand from entity @s container.{count}",
         f"item replace entity @s container.{count} from entity @e[tag=cc.ca.temp_item,limit=1] weapon",
         "data modify storage cchesed:cyofar HasSwapped set value 1b"
@@ -65,7 +65,7 @@ for count in range(0, inv_limit):
         file.writelines(list_to_str(yes_list))
 
     # Check All
-    all_str = "execute if score @s cc.ca.current matches ${count} if data storage cchesed:cyofar {HasSwapped:0b} run function cchesed:cyofar/check_slot/${count}"
+    all_str = "execute if score @s cc.ca.pointer matches ${count} if data storage cchesed:cyofar {HasSwapped:0b} run function cchesed:cyofar/check_slot/${count}"
     t_all = Template(all_str)
     check_all_str = t_all.substitute(count=count)
     check_all_list.append(check_all_str)

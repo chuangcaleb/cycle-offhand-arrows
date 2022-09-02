@@ -1,9 +1,9 @@
 # Initialize score if not initalized already
-execute unless score @s cc.ca.current matches 0.. run scoreboard players set @s cc.ca.current 0
+execute unless score @s cc.ca.pointer matches 0.. run scoreboard players set @s cc.ca.pointer 0
 
 # Store initial slot to check if we've made a full loop pass through the inv
-# execute store result storage cchesed:cyofar IntialSlot int 1 run scoreboard players get @s cc.ca.current
-scoreboard players operation @s cc.ca.initial = @s cc.ca.current
+# execute store result storage cchesed:cyofar IntialSlot int 1 run scoreboard players get @s cc.ca.pointer
+scoreboard players operation @s cc.ca.initial = @s cc.ca.pointer
 say cycle
 
 # HB: Switch bow back into hotbar, save arrow in armor stand
