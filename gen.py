@@ -54,7 +54,8 @@ for count in range(0, inv_limit):
         "scoreboard players add @s cc.ca.pointer 1" if not_limit else "scoreboard players set @s cc.ca.pointer 0",  # Increment pointer
         f"item replace entity @s weapon.offhand from entity @s container.{count}",
         f"item replace entity @s container.{count} from entity @e[tag=cc.ca.temp_item,limit=1] weapon",
-        "data modify storage cchesed:cyofar HasSwapped set value 1b"
+        "data modify storage cchesed:cyofar HasSwapped set value 1b",
+        "function cchesed:cyofar/ux/swap_sound"
     ]
     with open(base_path + "yes_slot/" + str(count) + ".mcfunction", 'w') as file:
         file.writelines(list_to_str(yes_list))
