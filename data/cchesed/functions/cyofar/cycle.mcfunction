@@ -4,7 +4,6 @@ execute unless score @s cc.ca.pointer matches 0.. run scoreboard players set @s 
 # Store initial slot to check if we've made a full loop pass through the inv
 # execute store result storage cchesed:cyofar IntialSlot int 1 run scoreboard players get @s cc.ca.pointer
 scoreboard players operation @s cc.ca.initial = @s cc.ca.pointer
-say cycle
 
 # HB: Switch bow back into hotbar, save arrow in armor stand
 summon armor_stand ~ -300 ~ {Tags:["cc.ca.temp_item"],HandItems:[{id:"minecraft:air",Count:1b},{}]}

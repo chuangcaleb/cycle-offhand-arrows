@@ -1,4 +1,3 @@
-say check 0
 data modify storage cchesed:cyofar IsArrowSlot set value 0b
 execute if data entity @s Inventory[{Slot:0b,id:"minecraft:arrow"}] run data modify storage cchesed:cyofar IsArrowSlot set value 1b
 execute if data entity @s Inventory[{Slot:0b,id:"minecraft:spectral_arrow"}] run data modify storage cchesed:cyofar IsArrowSlot set value 1b

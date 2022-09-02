@@ -26,7 +26,6 @@ for count in range(0, inv_limit):
 
     # Check
     check_list = [
-        f"say check {count}",
         "data modify storage cchesed:cyofar IsArrowSlot set value 0b"
     ]
     check_list.extend([
@@ -43,10 +42,7 @@ for count in range(0, inv_limit):
 
     # Case: not arrow
     not_list = [
-        f"say not {count}",
         "scoreboard players add @s cc.ca.pointer 1" if not_limit else "scoreboard players set @s cc.ca.pointer 0",  # Increment pointer
-        # If looped back, then just switch back
-        # "execute if score @s cc.ca.initial = @s cc.ca.pointer run say switch",
         "execute if score @s cc.ca.initial = @s cc.ca.pointer run item replace entity @s weapon.offhand from entity @e[tag=cc.ca.temp_item,limit=1] weapon",
         f"execute unless score @s cc.ca.initial = @s cc.ca.pointer run function cchesed:cyofar/check_slot/{next_i}"
     ]
@@ -55,7 +51,6 @@ for count in range(0, inv_limit):
 
     # Case: yes arrow
     yes_list = [
-        f"say yes {count}",
         "scoreboard players add @s cc.ca.pointer 1" if not_limit else "scoreboard players set @s cc.ca.pointer 0",  # Increment pointer
         f"item replace entity @s weapon.offhand from entity @s container.{count}",
         f"item replace entity @s container.{count} from entity @e[tag=cc.ca.temp_item,limit=1] weapon",
