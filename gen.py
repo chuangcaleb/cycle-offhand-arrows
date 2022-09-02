@@ -6,7 +6,7 @@ def list_to_str(list):
     return "\n".join(list)
 
 
-inv_limit = 5
+inv_limit = 36
 
 base_path = "data/cchesed/functions/cyofar/"
 
