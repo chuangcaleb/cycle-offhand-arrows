@@ -10,7 +10,7 @@ base_path = "data/cchesed/functions/cyofar/"
 
 ammo_list = ["arrow", "tipped_arrow", "firework_rocket"]
 
-check_str = 'execute if data entity @s Inventory[{Slot:${count}b,id:"minecraft:${ammo}"}] run data modify storage cchesed:cyofar ArrowSlot set value 1b'
+check_str = 'execute if data entity @s Inventory[{Slot:${count}b,id:"minecraft:${ammo}"}] run data modify storage cchesed:cyofar IsArrowSlot set value 1b'
 
 
 t = Template(check_str)
@@ -23,8 +23,8 @@ for count in range(0, 5):
         t.substitute(ammo=ammo, count=count)
         for ammo in ammo_list
     ]
-    str_list.append("execute if data storage cchesed:cyofar {ArrowSlot:1b} run say WOW")
-    str_list.append("execute if data storage cchesed:cyofar {ArrowSlot:0b} run say nope")
+    str_list.append("execute if data storage cchesed:cyofar {IsArrowSlot:1b} run say WOW")
+    str_list.append("execute if data storage cchesed:cyofar {IsArrowSlot:0b} run say nope")
 
     # pprint(str_list)
 
