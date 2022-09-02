@@ -56,7 +56,7 @@ for count in range(0, inv_limit):
     # Case: yes arrow
     yes_list = [
         f"say yes {count}",
-        # "scoreboard players add @s cc.ca.current 1" if not_limit else "scoreboard players set @s cc.ca.current 0",  # Increment pointer
+        "scoreboard players add @s cc.ca.current 1" if not_limit else "scoreboard players set @s cc.ca.current 0",  # Increment pointer
         f"item replace entity @s weapon.offhand from entity @s container.{count}",
         f"item replace entity @s container.{count} from entity @e[tag=cc.ca.temp_item,limit=1] weapon",
         "data modify storage cchesed:cyofar HasSwapped set value 1b"
