@@ -65,10 +65,8 @@ for count in range(0, inv_limit):
         file.writelines(list_to_str(yes_list))
 
     # Check All
-    all_str = "execute if score @s cc.ca.pointer matches ${count} if data storage cchesed:cyofar {HasSwapped:0b} run function cchesed:cyofar/check_slot/${count}"
-    t_all = Template(all_str)
-    check_all_str = t_all.substitute(count=count)
-    check_all_list.append(check_all_str)
+    all_str = f"execute if score @s cc.ca.pointer matches {count} if data storage cchesed:cyofar {{HasSwapped:0b}} run function cchesed:cyofar/check_slot/{count}"
+    check_all_list.append(all_str)
 
 
 with open(base_path + "check_slot/check_all.mcfunction", 'w') as file:
