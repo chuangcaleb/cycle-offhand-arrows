@@ -43,7 +43,7 @@ for count in range(0, inv_limit):
     # Case: not arrow
     not_list = [
         "scoreboard players add @s cc.ca.pointer 1" if not_limit else "scoreboard players set @s cc.ca.pointer 0",  # Increment pointer
-        "execute if score @s cc.ca.initial = @s cc.ca.pointer run item replace entity @s weapon.offhand from entity @e[tag=cc.ca.temp_item,limit=1] weapon",
+        "execute if score @s cc.ca.initial = @s cc.ca.pointer run function cchesed:cyofar/utils/full_loop",
         f"execute unless score @s cc.ca.initial = @s cc.ca.pointer run function cchesed:cyofar/check_slot/{next_i}"
     ]
     with open(base_path + "not_slot/" + str(count) + ".mcfunction", 'w') as file:
@@ -55,7 +55,7 @@ for count in range(0, inv_limit):
         f"item replace entity @s weapon.offhand from entity @s container.{count}",
         f"item replace entity @s container.{count} from entity @e[tag=cc.ca.temp_item,limit=1] weapon",
         "data modify storage cchesed:cyofar HasSwapped set value 1b",
-        "function cchesed:cyofar/ux/swap_sound"
+        "function cchesed:cyofar/utils/swap_sound"
     ]
     with open(base_path + "yes_slot/" + str(count) + ".mcfunction", 'w') as file:
         file.writelines(list_to_str(yes_list))
