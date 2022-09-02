@@ -58,13 +58,14 @@ for count in range(0, inv_limit):
         f"say yes {count}",
         # "scoreboard players add @s cc.ca.current 1" if not_limit else "scoreboard players set @s cc.ca.current 0",  # Increment pointer
         f"item replace entity @s weapon.offhand from entity @s container.{count}",
-        f"item replace entity @s container.{count} from entity @e[tag=cc.ca.temp_item,limit=1] weapon"
+        f"item replace entity @s container.{count} from entity @e[tag=cc.ca.temp_item,limit=1] weapon",
+        "data modify storage cchesed:cyofar HasSwapped set value 1b"
     ]
     with open(base_path + "yes_slot/" + str(count) + ".mcfunction", 'w') as file:
         file.writelines(list_to_str(yes_list))
 
     # Check All
-    all_str = "execute if score @s cc.ca.current matches ${count} run function cchesed:cyofar/check_slot/${count}"
+    all_str = "execute if score @s cc.ca.current matches ${count} if data storage cchesed:cyofar {HasSwapped:0b} run function cchesed:cyofar/check_slot/${count}"
     t_all = Template(all_str)
     check_all_str = t_all.substitute(count=count)
     check_all_list.append(check_all_str)

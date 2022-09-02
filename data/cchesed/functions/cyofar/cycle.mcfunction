@@ -14,6 +14,9 @@ item replace entity @s weapon.mainhand from entity @s weapon.offhand
 
 # Reset the ArrowSlot flag to 0b
 # data modify storage cchesed:cyofar IsArrowSlot set value 0b
+# Reset the HasSwapped flag to 0b
+# This is to prevent double triggering of check_slot from the previous iter's not_slot, followed by the current check_slot
+data modify storage cchesed:cyofar HasSwapped set value 0b
 
 # Check all slots
 function cchesed:cyofar/check_slot/check_all
