@@ -1,4 +1,4 @@
-name: Zip Datapack
+name: Zip Cleaned Datapack
 on:
   release:
     types: [published]
@@ -7,9 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Zip Datapack
+    - name: Zip and Clean Datapack
       uses: thedoctor0/zip-release@main
       with:
         type: 'zip'
         filename: 'cycle-offhand-arrows.zip'
         exclusions: '*.git* *.py .github/**'
+    - name: Upload Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "cycle-offhand-arrows.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
