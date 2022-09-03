@@ -1,3 +1,4 @@
+scoreboard players add @s cc.ca.pointer 1
 data modify storage cchesed:cyofar IsArrowSlot set value 0b
 execute if data entity @s Inventory[{Slot:1b,id:"minecraft:arrow"}] run data modify storage cchesed:cyofar IsArrowSlot set value 1b
 execute if data entity @s Inventory[{Slot:1b,id:"minecraft:spectral_arrow"}] run data modify storage cchesed:cyofar IsArrowSlot set value 1b
