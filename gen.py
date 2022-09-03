@@ -5,13 +5,18 @@ import json
 def list_to_str(list):
     return "\n".join(list)
 
-# pred_json = json.load("ammo_slots_template.json")
-# print(pred_json)
+
+# with open('ammo_slots_template.json') as f:
+    # pred_temp_json = json.loads(f)
+# pred_temp_json = json.load(open('ammo_slots_template.json', 'r'))
+# print(pred_temp_json)
+
+# pred_temp = Template(str(pred_temp_json))
 
 inv_limit = 36
 
 base_dir = "data/cchesed/functions/cyofar/"
-pred_dir = "data/cchesed/predicates/ammo_slots/"
+# pred_dir = "data/cchesed/predicates/cyofar/ammo_slots/"
 
 ammo_list = ["arrow", "spectral_arrow", "tipped_arrow", "firework_rocket"]
 
@@ -67,8 +72,12 @@ for count in range(0, inv_limit):
     all_str = f"execute if score @s cc.ca.pointer matches {count} if data storage cchesed:cyofar {{HasSwapped:0b}} run function cchesed:cyofar/check_slot/{count}"
     check_all_list.append(all_str)
 
-    # with open(f"{pred_dir}/{count}.json", 'w') as file:
-    #     file.writelines(list_to_str(yes_list))
+    # Ammo slot predicate
+    # pred_str = pred_temp.substitute(count=count)
+    # with open(f"{pred_dir}{count}.json", 'w') as file:
+    #     # file.write(pred_dict)
+    #     # json.dump(pred_dict,f"{base_dir}{count}.json")
+    #     file.write(pred_str)
 
 
 with open(f"{base_dir}check_slot/check_all.mcfunction", 'w') as file:

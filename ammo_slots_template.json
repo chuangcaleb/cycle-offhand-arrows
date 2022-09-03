@@ -1,0 +1,48 @@
+{
+	"condition": "minecraft:inverted",
+	"term": {
+		"condition": "minecraft:alternative",
+		"terms": [
+			{
+				"condition": "minecraft:inverted",
+				"term": {
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"nbt": "{Inventory[{Slot:${count}b,id:\"minecraft:arrow\"}]}"
+					}
+				}
+			},
+			{
+				"condition": "minecraft:inverted",
+				"term": {
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"nbt": "{Inventory[{Slot:${count}b,id:\"minecraft:spectral_arrow\"}]}"
+					}
+				}
+			},
+			{
+				"condition": "minecraft:inverted",
+				"term": {
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"nbt": "{Inventory[{Slot:${count}b,id:\"minecraft:tipped_arrow\"}]}"
+					}
+				}
+			},
+			{
+				"condition": "minecraft:inverted",
+				"term": {
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"nbt": "{Inventory[{Slot:${count}b,id:\"minecraft:firework_rocket\"}]}"
+					}
+				}
+			}
+		]
+	}
+}
