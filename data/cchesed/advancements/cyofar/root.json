@@ -1,7 +1,7 @@
 {
 	"display": {
-		"title": "Cycle Offhand Arrows v0.1",
-		"description": "\nCycle through arrow types in the offhand slot by using the offhand key whilst holding a bow or crossbow!\n\n§7§nhttps://www.planetminecraft.com/member/calebchan/\n",
+		"title": "Cycle Offhand Arrows v1.0",
+		"description":  [{"text":"\nCycle through arrow types in the offhand slot by using your offhand key ("},{"keybind": "key.swapOffhand","color":"white"},{"text":") whilst holding a Bow or Crossbow! \n\n§7§nhttps://www.planetminecraft.com/member/calebchan/\n"}],
 		"icon": {
 			"item": "minecraft:arrow",
 			"nbt": "{display:{Name:'{\"text\":\"Cycle Offhand Arrows\",\"italic\":false}'},Enchantments:[{}]}"

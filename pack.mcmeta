@@ -1,6 +1,6 @@
 {
 	"pack": {
 		"pack_format": 10,
-		"description": "Cycle through arrow types in the offhand!"
+		"description": "nCycle through arrow types in the offhand slot by using your offhand key whilst holding a Bow or Crossbow!"
 	}
 }
