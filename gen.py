@@ -62,6 +62,7 @@ for count in range(0, inv_limit):
     yes_list = [
         f"item replace entity @s weapon.offhand from entity @s container.{count}",
         f"item replace entity @s container.{count} from entity @e[tag=cc.ca.temp_item,limit=1] weapon",
+        # 'title @s actionbar {"nbt":"Inventory[{Slot:-106b}]","entity":"@s"}',
         "data modify storage cchesed:cyofar HasSwapped set value 1b",
         "execute at @s run function cchesed:cyofar/utils/swap_sound"
     ]
