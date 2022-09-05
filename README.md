@@ -2,6 +2,8 @@
 
 > Cycle through arrow types in the offhand slot by using your offhand key whilst holding a Bow or Crossbow!
 
+https://user-images.githubusercontent.com/62867911/188391208-dd7e4895-39ce-403a-8a7c-0f29d9e46aeb.mov
+
 ## Motivation
 
 There's a bunch of interesting arrows you can shoot in the game. Arrows, Spectral Arrows, Firework Rockets, and a wide arsenal of Tipped Arrows. But how often in practice do you actually carry and use more than one type of arrow?
