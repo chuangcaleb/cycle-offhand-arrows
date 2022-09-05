@@ -2,7 +2,7 @@
 
 > Cycle through arrow types in the offhand slot by using your offhand key whilst holding a Bow or Crossbow!
 
-https://user-images.githubusercontent.com/62867911/188391208-dd7e4895-39ce-403a-8a7c-0f29d9e46aeb.mov
+https://user-images.githubusercontent.com/62867911/188394776-23d692e8-5ad3-461f-93e4-b6a5b0dff5b1.mp4
 
 ## Motivation
 
