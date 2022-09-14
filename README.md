@@ -4,6 +4,8 @@
 
 https://user-images.githubusercontent.com/62867911/188394776-23d692e8-5ad3-461f-93e4-b6a5b0dff5b1.mp4
 
+> [Full Showcase on Youtube](https://youtu.be/KCEkLrWOQwQ)
+
 ## Motivation
 
 There's a bunch of interesting arrows you can shoot in the game. Arrows, Spectral Arrows, Firework Rockets, and a wide arsenal of Tipped Arrows. But how often in practice do you actually carry and use more than one type of arrow?
