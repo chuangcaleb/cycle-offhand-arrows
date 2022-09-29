@@ -19,3 +19,5 @@ data modify storage cchesed:cyofar HasSwapped set value 0b
 
 # Check all slots
 function cchesed:cyofar/check_slot/check_all
+
+title @s actionbar {"nbt":"Inventory[{Slot:-106b}].tag.display.Name","entity":"@s","interpret":True}
